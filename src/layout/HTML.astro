@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Font Families */
+
+    --system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --Sora: "Sora", var(--system-fonts);
+
+    /* Colours */
+    --color-brand-pink: #f9c9cb;
+    --color-brand-yellow: #f5f0bf;
+    --color-brand-green: #bde4c8;
+    --color-brand-blue: #b8f2f2;
+    --color-brand-purple: #bdafe8;
+
+    --color-twitter: #1da1f2;
+    --color-linkedin: #0077b5;
+    --color-github: #2f2f2f;
+
+    --color-bg-default: #ffffff;
+    --color-bg-muted: #e7ebee;
+    --color-bg-subtle: #f5f8fa;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-fg-subtle: #6e7781;
+
+    /* Font Sizes */
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.875rem;
+    --fs-4xl: 2.25rem;
+    --fs-5xl: 3rem;
+    --fs-6xl: 3.75rem;
+    --fs-7xl: 4.5rem;
+    --fs-8xl: 6rem;
+    --fs-9xl: 8rem;
+  }
+
+  /* CSS Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  html {
+    font-size: 16px;
+    color: var(--color-fg-default);
+    background-color: var(--color-bg-default);
+    font-family: var(--system-fonts);
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+</style>

@@ -1,0 +1,83 @@
+---
+import Image from "../components/core/Image.astro";
+import Text from "../components/core/typography/Text.astro";
+import BackgroundProvider from "../components/presentation/Background/BackgroundProvider.astro";
+import Logo from "../components/presentation/Logo.astro";
+import Polaroid from "../components/presentation/Polaroid.astro";
+import HTML from "../layout/HTML.astro";
+import MainAside from "../layout/MainAside.astro";
+import ProjectMatrix from "../layout/ProjectMatrix.astro";
+import SideBar from "../layout/SideBar.astro";
+---
+
+<HTML>
+  <BackgroundProvider>
+    <MainAside>
+      <ProjectMatrix slot="main">
+        <div class="position">
+          <div class="height">
+            <img
+              src="https://thumbs.dreamstime.com/b/black-white-cat-powerful-especially-pussy-88859325.jpg"
+            />
+          </div>
+        </div>
+        <div class="position">
+          <div class="height">
+            <img
+              src="https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?cs=srgb&dl=pexels-peng-louis-1643457.jpg&fm=jpg"
+            />
+          </div>
+        </div>
+        <div class="position">
+          <div class="height">
+            <img
+              src="https://thumbs.dreamstime.com/b/black-white-cat-powerful-especially-pussy-88859325.jpg"
+            />
+          </div>
+        </div>
+        <div class="position">
+          <div class="height">
+            <img
+              src="https://thumbs.dreamstime.com/b/black-white-cat-powerful-especially-pussy-88859325.jpg"
+            />
+          </div>
+        </div>
+        <div class="position">
+          <div class="height">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Checkerboard_pattern.svg/2048px-Checkerboard_pattern.svg.png"
+            />
+          </div>
+        </div>
+      </ProjectMatrix>
+      <SideBar slot="aside">
+        <Logo />
+        <Polaroid />
+        <span>sidebar</span>
+      </SideBar>
+    </MainAside>
+  </BackgroundProvider>
+
+  <style>
+    .position {
+      width: 47%;
+      margin-bottom: 5%;
+    }
+    .height {
+      width: 100%;
+      position: relative;
+      padding-top: 82%;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</HTML>
