@@ -1,5 +1,25 @@
-<div>
-  <img
+---
+import FixedAspectImage from "../core/FixedAspectImage.astro";
+import Text from "../core/typography/Text.astro";
+---
+
+<div class="card">
+  <FixedAspectImage
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUa6jodh1pVavlgoMibhIOADkU9or3KYpr7A&usqp=CAU"
   />
+  <div class="text">
+    <Text>me in cat form</Text>
+  </div>
 </div>
+
+<style>
+  .card {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 10px;
+  }
+  .text {
+    margin: 15px 5px;
+  }
+</style>

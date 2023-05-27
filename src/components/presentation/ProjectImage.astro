@@ -1,0 +1,17 @@
+---
+import FixedAspectImage from "../core/FixedAspectImage.astro";
+const { src } = Astro.props;
+---
+
+<div>
+  <FixedAspectImage height="82%" src={src} />
+</div>
+
+<style>
+  div {
+    width: 47%;
+    margin-bottom: 5%;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+</style>
