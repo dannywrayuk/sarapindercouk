@@ -1,16 +1,16 @@
 ---
-const { src, height, width } = Astro.props;
+const { src, height, width, size, class: className } = Astro.props;
 ---
 
-<div>
+<div class={className}>
   <img src={src} />
 </div>
 
-<style define:vars={{ height, width }}>
+<style define:vars={{ height, width, size }}>
   div {
     position: relative;
-    width: var(--width, 100%);
-    padding-top: var(--height, 100%);
+    width: var(--width, var(--size, 100%));
+    padding-top: var(--height, var(--size, 100%));
   }
   img {
     position: absolute;

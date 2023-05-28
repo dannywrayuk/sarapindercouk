@@ -1,8 +1,10 @@
 ---
+import Text from "../components/core/typography/Text.astro";
 import BackgroundProvider from "../components/presentation/Background/BackgroundProvider.astro";
 import Logo from "../components/presentation/Logo.astro";
 import Polaroid from "../components/presentation/Polaroid.astro";
 import ProjectImage from "../components/presentation/ProjectImage.astro";
+import SocialButtons from "../components/presentation/SocialButtons.astro";
 import HTML from "../layout/HTML.astro";
 import MainAside from "../layout/MainAside.astro";
 import ProjectMatrix from "../layout/ProjectMatrix.astro";
@@ -14,25 +16,33 @@ import SideBar from "../layout/SideBar.astro";
     <MainAside>
       <ProjectMatrix slot="main">
         <ProjectImage
+          hoverColor="pink"
           src="https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?cs=srgb&dl=pexels-peng-louis-1643457.jpg&fm=jpg"
         />
         <ProjectImage
+          hoverColor="yellow"
           src="https://thumbs.dreamstime.com/b/black-white-cat-powerful-especially-pussy-88859325.jpg"
         />
         <ProjectImage
+          hoverColor="purple"
           src="https://thumbs.dreamstime.com/b/black-white-cat-powerful-especially-pussy-88859325.jpg"
         />
         <ProjectImage
+          hoverColor="green"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Checkerboard_pattern.svg/2048px-Checkerboard_pattern.svg.png"
         />
         <ProjectImage
+          hoverColor="blue"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Checkerboard_pattern.svg/2048px-Checkerboard_pattern.svg.png"
         />
       </ProjectMatrix>
       <SideBar slot="aside">
-        <Logo />
+        <div>
+          <Logo />
+          <Text>Product Designer</Text>
+        </div>
         <Polaroid />
-        <span>sidebar</span>
+        <SocialButtons />
       </SideBar>
     </MainAside>
   </BackgroundProvider>

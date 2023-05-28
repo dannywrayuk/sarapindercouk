@@ -1,0 +1,16 @@
+---
+import Link from "./Link.astro";
+const { class: className, ...props } = Astro.props;
+---
+
+<Link {...props} class:list={[className, "bubble"]}>
+  <slot />
+</Link>
+
+<style>
+  .bubble {
+    border-radius: 35px;
+    display: block;
+    outline: 2px solid var(--color-brand-gray);
+  }
+</style>

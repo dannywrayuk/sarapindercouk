@@ -1,17 +1,26 @@
 ---
 import FixedAspectImage from "../core/FixedAspectImage.astro";
-const { src } = Astro.props;
+const { src, hoverColor } = Astro.props;
+const hoverColors = ["blue", "pink", "purple", "yellow", "green"];
+const hoverColorVar = hoverColors.includes(hoverColor)
+  ? `var(--color-brand-${hoverColor})`
+  : "var(--color-brand-pink)";
 ---
 
-<div>
+<div class="projectImage">
   <FixedAspectImage height="82%" src={src} />
 </div>
 
-<style>
-  div {
+<style define:vars={{ hoverColor: hoverColorVar }}>
+  .projectImage {
     width: 47%;
     margin-bottom: 5%;
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s;
+  }
+  .projectImage:hover {
+    box-shadow: -15px 15px 0px 0px var(--hoverColor);
   }
 </style>
