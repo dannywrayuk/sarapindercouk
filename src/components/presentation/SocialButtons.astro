@@ -8,13 +8,13 @@ import Text from "../core/typography/Text.astro";
 
 <div>
   <LinkButton class="link">
-    <LinkedIn class="icon" /><Text>LinkedIn</Text>
+    <LinkedIn class="icon" />
   </LinkButton>
   <LinkButton class="link">
-    <Behance class="icon" /><Text>Behance</Text>
+    <Behance class="icon" />
   </LinkButton>
   <LinkButton class="link">
-    <Instagram class="icon" /><Text>Instagram</Text>
+    <Instagram class="icon" />
   </LinkButton>
 </div>
 
@@ -22,12 +22,11 @@ import Text from "../core/typography/Text.astro";
   div {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    justify-content: space-around;
+    margin-top: auto;
   }
   .link {
-    width: 100%;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +36,7 @@ import Text from "../core/typography/Text.astro";
     transition: background-color 0.3s;
   }
   .link:hover:nth-child(1) {
-    background-color: var(--color-brand-pink);
+    background-color: var(--color-brand-blue);
   }
   .link:hover:nth-child(2) {
     background-color: var(--color-brand-yellow);
@@ -46,7 +45,6 @@ import Text from "../core/typography/Text.astro";
     background-color: var(--color-brand-purple);
   }
   .icon {
-    margin-right: 10px;
     width: 24px;
   }
 </style>

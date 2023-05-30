@@ -1,5 +1,6 @@
-
-
+<svg width="2000" height="2000" viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_140_3815)">
+<rect width="2000" height="2000" fill="white"/>
 <circle cx="139.5" cy="149.5" r="7.5" fill="#F9C9CB"/>
 <circle cx="790.5" cy="853.5" r="7.5" fill="#BDAFE8"/>
 <circle cx="1244.5" cy="1035.5" r="7.5" fill="#BDAFE8"/>
@@ -1798,3 +1799,10 @@
 <line x1="1.5" y1="-1.5" x2="23.5084" y2="-1.5" transform="matrix(-0.995854 -0.0909635 0.0836114 -0.996498 1772.86 1138.04)" stroke="#A795DA" stroke-width="3" stroke-linecap="round"/>
 <line x1="1980.79" y1="1605.25" x2="1965.83" y2="1589.12" stroke="#A795DA" stroke-width="3" stroke-linecap="round"/>
 <line x1="1975.02" y1="1610.07" x2="1960.06" y2="1593.94" stroke="#A795DA" stroke-width="3" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_140_3815">
+<rect width="2000" height="2000" fill="white"/>
+</clipPath>
+</defs>
+</svg>

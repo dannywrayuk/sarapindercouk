@@ -1,0 +1,39 @@
+---
+const patternSize = 30;
+const circleSize = 2;
+---
+
+<div class="background-container">
+  <svg class="background">
+    <pattern
+      id="backgroundPattern"
+      width={patternSize}
+      height={patternSize}
+      x="50vw"
+      y="50vh"
+      patternUnits="userSpaceOnUse"
+      patternTransform={`translate(-${circleSize},-${circleSize})`}
+    >
+      <circle cx={circleSize} cy={circleSize} r={circleSize} fill="#ddd"
+      ></circle>
+    </pattern>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#backgroundPattern)"
+    ></rect>
+  </svg>
+  <slot />
+</div>
+
+<style>
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  .background-container {
+    position: relative;
+    height: 100%;
+  }
+</style>
