@@ -5,6 +5,10 @@ import Polaroid from "../components/presentation/Polaroid.astro";
 import Clip from "../components/presentation/Clip.astro";
 import Peg from "../components/presentation/Peg.astro";
 import HTML from "../layout/HTML.astro";
+import Box from "../components/presentation/Box.astro";
+import Instagram from "../components/core/icons/Instagram.astro";
+import Behance from "../components/core/icons/Behance.astro";
+import LinkedIn from "../components/core/icons/LinkedIn.astro";
 ---
 
 <HTML>
@@ -13,53 +17,103 @@ import HTML from "../layout/HTML.astro";
       <div class="border">
         <NameCard class="name-card">sara pinder</NameCard>
         <Clip class="clip" />
-        <Polaroid class="polaroid" src="./sara.png">me in amsterdam</Polaroid>
+        <Polaroid class="polaroid" src="./img/sara.png">
+          me in amsterdam
+        </Polaroid>
         <Peg class="peg" />
+        <Box class="box box1">
+          <a class="socialLink"><Instagram class="icon" /></a>
+        </Box>
+        <Box class="box box2">
+          <a class="socialLink"><Behance class="icon" /></a>
+        </Box>
+        <Box class="box box3">
+          <a class="socialLink"><LinkedIn class="icon" /></a>
+        </Box>
       </div>
     </div>
   </DotBackground>
-</HTML>
 
-<style>
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  .border {
-    position: relative;
-    border: 10px solid transparent;
-    border-image: url("/border.svg") 10 10 10 10 stretch stretch;
-    width: 1200px;
-    height: 790px;
-    background-image: url("/test.svg");
-  }
-  .polaroid {
-    position: absolute;
-    width: 220px;
-    left: 0;
-    top: 200px;
-  }
-  .name-card {
-    position: absolute;
-    width: 600px;
-    left: 0;
-    top: 0;
-    transform: rotate(-5deg);
-  }
-  .clip {
-    position: absolute;
-    width: 100px;
-    left: 230px;
-    top: -60px;
-    transform: rotate(-5deg);
-  }
-  .peg {
-    position: absolute;
-    width: 30px;
-    left: 90px;
-    top: 175px;
-  }
-</style>
+  <style>
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    .border {
+      position: relative;
+      border: 10px solid transparent;
+      border-image: url("/img/backgroundBorder.svg") 10 10 10 10 stretch stretch;
+      width: 1205px;
+      height: 790px;
+      background-image: url("/img/backgroundGrid.svg");
+    }
+    .polaroid {
+      position: absolute;
+      width: 220px;
+      left: 0;
+      top: 200px;
+    }
+    .name-card {
+      position: absolute;
+      width: 600px;
+      left: 0;
+      top: 0;
+      color: var(--color-brand-pink);
+      transform: rotate(-4deg);
+    }
+    .clip {
+      position: absolute;
+      width: 100px;
+      left: 230px;
+      top: -60px;
+      transform: rotate(-5deg);
+      color: #777;
+    }
+    .peg {
+      position: absolute;
+      width: 30px;
+      left: 90px;
+      top: 175px;
+      color: var(--color-brand-yellow);
+    }
+
+    .box {
+      width: 100px;
+      position: absolute;
+      left: 100px;
+      bottom: -30px;
+      transform: rotate(10deg);
+      transform-origin: top center;
+      transition: 300ms;
+    }
+    .box:hover {
+      transform: rotate(5deg);
+    }
+
+    .box1 {
+      left: 100px;
+      color: var(--color-brand-yellow);
+    }
+
+    .box2 {
+      left: 220px;
+      color: var(--color-brand-pink);
+    }
+
+    .box3 {
+      left: 340px;
+      color: var(--color-brand-green);
+    }
+    .socialLink {
+      color: black;
+      cursor: pointer;
+      padding: 20px;
+    }
+    .icon {
+      width: 40px;
+    }
+  </style>
+</HTML>
