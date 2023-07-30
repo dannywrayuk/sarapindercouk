@@ -4,6 +4,18 @@ import Bulb from "./Bulb.astro";
 
 <div class="wrapper">
   <Bulb class="bulb-1" />
+  <svg
+    class="cable"
+    viewBox="0 0 643 873"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 65C126 63 154.5 4.5 231.5 4.5C308.5 4.5 357 65 430 65C503 65 573.5 -6.5 615.5 20.5C657.5 47.5 595.5 169.5 595.5 225C595.5 280.5 638.5 372 638.5 435.5C638.5 499 590 562 590 628.5C590 695 619.357 749.091 615.5 812.5C613.675 842.5 607.5 857 600.5 868"
+      stroke="#9D9C9C"
+      stroke-width="9"
+      stroke-linecap="round"></path>
+  </svg>
 </div>
 
 <style>
@@ -12,8 +24,17 @@ import Bulb from "./Bulb.astro";
     --bulb-outline: yellow;
   }
 
+  .cable {
+    position: absolute;
+    width: 643px;
+    right: -30px;
+    top: -30px;
+  }
+
   .bulb-1 {
     position: absolute;
-    width: 100px;
+    width: 50px;
+    right: 155px;
+    top: 33px;
   }
 </style>
