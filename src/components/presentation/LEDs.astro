@@ -1,0 +1,19 @@
+---
+import Bulb from "./Bulb.astro";
+---
+
+<div class="wrapper">
+  <Bulb class="bulb-1" />
+</div>
+
+<style>
+  .wrapper {
+    --bulb-color: gold;
+    --bulb-outline: yellow;
+  }
+
+  .bulb-1 {
+    position: absolute;
+    width: 100px;
+  }
+</style>

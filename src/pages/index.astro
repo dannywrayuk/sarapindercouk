@@ -6,6 +6,10 @@ import Clip from "../components/presentation/Clip.astro";
 import Peg from "../components/presentation/Peg.astro";
 import HTML from "../layout/HTML.astro";
 import Box from "../components/presentation/Box.astro";
+import AboutMe from "../components/presentation/AboutMe.astro";
+import OtherStuff from "../components/presentation/OtherStuff.astro";
+import Calendar from "../components/presentation/Calendar.astro";
+import LEDs from "../components/presentation/LEDs.astro";
 import Instagram from "../components/core/icons/Instagram.astro";
 import Behance from "../components/core/icons/Behance.astro";
 import LinkedIn from "../components/core/icons/LinkedIn.astro";
@@ -21,6 +25,10 @@ import LinkedIn from "../components/core/icons/LinkedIn.astro";
           me in amsterdam
         </Polaroid>
         <Peg class="peg" />
+        <AboutMe class="aboutme">hello</AboutMe>
+        <OtherStuff class="otherstuff">hello again</OtherStuff>
+        <Calendar class="calendar" />
+        <LEDs />
         <Box class="box box1">
           <a class="socialLink"><Instagram class="icon" /></a>
         </Box>
@@ -53,8 +61,10 @@ import LinkedIn from "../components/core/icons/LinkedIn.astro";
     .polaroid {
       position: absolute;
       width: 220px;
-      left: 0;
-      top: 200px;
+      left: 40px;
+      top: 210px;
+      transform-origin: top center;
+      transform: rotate(5deg);
     }
     .name-card {
       position: absolute;
@@ -63,6 +73,21 @@ import LinkedIn from "../components/core/icons/LinkedIn.astro";
       top: 0;
       color: var(--color-brand-pink);
       transform: rotate(-4deg);
+    }
+    .aboutme {
+      left: 320px;
+      top: 260px;
+      width: 400px;
+    }
+    .otherstuff {
+      left: 400px;
+      top: 560px;
+      width: 240px;
+    }
+    .calendar {
+      left: 790px;
+      top: 495px;
+      width: 240px;
     }
     .clip {
       position: absolute;
@@ -94,17 +119,17 @@ import LinkedIn from "../components/core/icons/LinkedIn.astro";
     }
 
     .box1 {
-      left: 100px;
+      left: 50px;
       color: var(--color-brand-yellow);
     }
 
     .box2 {
-      left: 220px;
+      left: 170px;
       color: var(--color-brand-pink);
     }
 
     .box3 {
-      left: 340px;
+      left: 290px;
       color: var(--color-brand-green);
     }
     .socialLink {
